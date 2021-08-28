@@ -1,0 +1,143 @@
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.nav {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.nav__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__links {
+    display: flex;
+    list-style: none;
+}
+
+.nav__content {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    margin-right: 10px;
+    list-style: none;
+    color: black;
+}
+
+.nav__content:hover {
+    border-bottom: 1px solid;
+}
+
+.logo {
+    align-content: center;
+    justify-content: right;
+}
+
+header {
+    width: 100%;
+    background-color: #e3306b;
+}
+
+.header__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.ico {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: .2s ease;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+#js-menu-btn {
+    display: none;
+}
+
+.header__subtitle {
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.card__image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.card__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: medium;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and(max-width:768px) {
+    #js-menu-btn {
+        display: block;
+        order: 0;
+        margin-bottom: 20px;
+    }
+    .nav {
+        height: max-content;
+        .nav__row {
+            flex-direction: column;
+        }
+        transition: .2s ease;
+    }
+    .nav__links {
+        order: 1;
+        display: none;
+        align-items: center;
+        &.active {
+            display: flex;
+            flex-direction: column;
+        }
+       
+    }
+    .logo {
+        order: 0;
+        display: none;
+    }
+}
